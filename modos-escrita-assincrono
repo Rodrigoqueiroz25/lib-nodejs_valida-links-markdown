@@ -1,0 +1,44 @@
+//função que trabalha assincronamente. uma forma de usar promisses.
+// function obtemArquivo(caminho){
+//     fs.promises.readFile(caminho, 'utf-8')
+//         .then(texto => console.log(chalk.green(texto)))
+//         .catch(erro => trataErro(erro));
+// }
+
+//função que usa promessas mas usando as palavras async e await (necessario usar try cath para tratar erro de modo personalizado)
+// async function obtemArquivo(caminho){
+//     try {
+//         const texto = await fs.promises.readFile(caminho, 'utf-8');
+//         console.log(chalk.green(texto));    
+//     } catch (error) {
+//         trataErro(error);
+//     }
+// }
+
+//função de que trabalha sincronamente.
+// function obtemArquivo(caminho){
+//     fs.readFile(caminho, 'utf-8', (err, data) => {
+//         if(err){
+//             trataErro(err);
+//         }
+//         console.log(chalk.green(data));
+//     })
+// }
+
+obtemArquivo('./arquivos/texto1.md');
+
+
+//construindo a própria promessa.
+// function promessa(bool) {
+//     const x = bool;
+//     return new Promise((resolve, reject) => {
+//       if (!x) {
+//         reject(new Error("falha na promessa"));
+//       }
+//       resolve("sucesso na promessa");
+//     });
+//    }
+ 
+//    promessa(false)
+//     .then((texto) => console.log(texto))
+//    // sucesso na promessa
