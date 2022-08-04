@@ -1,3 +1,3 @@
 #Usage
 
-node cli.js caminho/do/arquivo
+node cli.js [--validar] --path caminho/do/arquivo
